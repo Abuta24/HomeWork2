@@ -1,8 +1,8 @@
 function debouncer(delay, cd) {
-  let timer;
+  let timeout;
   return (...arguements) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
       cd(...arguements);
     }, delay);
   };
